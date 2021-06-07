@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Type Tester Prototype</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="site-container">
+  <div id="btfmono" class="type-tester" data-font="BTFMono" data-styles="normal-italic" data-weights="400-700" data-font-size="36" data-min-size="6" data-max-size="72" data-color-pairs="#e8e8e8-#006efa #eeeeee-#333333" data-woff-url"=https://s3-us-west-2.amazonaws.com/s.cdpn.io/26344/btfmonov6-regular-webfont.woff" data-svg-url="https://s3-us-west-2.amazonaws.com/s.cdpn.io/26344/btfmonov6-regular-webfont.svg">
+    <style>
+      @font-face {
+          font-family: 'BTFMono';
+          src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/26344/btfmonov6-regular-webfont.woff') format('woff'),
+               url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/26344/btfmonov6-regular-webfont.svg#btf_mono_v6regular') format('svg');
+          font-weight: normal;
+          font-style: normal;
+      }
+    </style>
+    <div class="type-tester-inner">
+      <p class="test-para" contenteditable="true">Start typing here to test out this custom font for yourself...Donec ullamcorper nulla non metus auctor fringilla. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

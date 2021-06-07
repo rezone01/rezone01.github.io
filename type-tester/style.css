@@ -1,0 +1,173 @@
+body {
+  padding: 50px;
+  font-family: "Karla", sans-serif;
+}
+
+.site-container {
+  margin: 0 auto;
+}
+
+.-hidden {
+  display: none;
+}
+
+.type-tester {
+  position: relative;
+  box-sizing: border-box;
+}
+.type-tester *, .type-tester *::before, .type-tester *::after {
+  box-sizing: inherit;
+}
+.type-tester .type-tester-inner {
+  padding: 44px;
+  border: 2px solid #000;
+  border-top-width: 0;
+}
+.type-tester .test-para {
+  display: none;
+  margin: 1em 0 0;
+  padding: 0.25em 0;
+  line-height: 1.25;
+  position: relative;
+}
+.type-tester .test-para.-active {
+  display: block;
+}
+.type-tester .test-para:first-of-type {
+  margin-top: 0;
+}
+.type-tester .test-para:focus {
+  outline: none;
+}
+.type-tester .test-para:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+.type-tester .test-para:hover::after {
+  display: block;
+}
+.type-tester .test-para::after {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  color: #fff;
+  display: none;
+  padding: 0.2em;
+  font-size: 0.5em;
+  position: absolute;
+  content: "click to edit";
+  background: rgba(0, 0, 0, 0.9);
+}
+.type-tester .cursor {
+  width: 2px;
+  height: 1.2em;
+  bottom: -0.2em;
+  background: #000;
+  position: relative;
+  display: inline-block;
+  -webkit-animation: blink 1s steps(2, end) infinite;
+          animation: blink 1s steps(2, end) infinite;
+}
+.type-tester #typetools {
+  color: #fff;
+  padding: 22px;
+  background: #000;
+  position: relative;
+}
+.type-tester #typetools h3, .type-tester #typetools label, .type-tester #typetools button {
+  margin: 0;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 0.25em;
+  line-height: 1.83333em;
+  text-transform: uppercase;
+}
+.type-tester #typetools .typetools-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.type-tester #typetools .type-tool {
+  margin-top: 22px;
+  padding-right: 20px;
+}
+.type-tester #typetools .type-tool label {
+  display: block;
+  margin-bottom: 10px;
+}
+.type-tester #typetools .type-tool#textAlignment button, .type-tester #typetools .type-tool#glyphsTypeToggle button {
+  color: #fff;
+  height: 22px;
+  border: none;
+  padding: 0 11px;
+  cursor: pointer;
+  background: #000;
+  line-height: 22px;
+  outline: 1px solid #fff;
+}
+.type-tester #typetools .type-tool#textAlignment button:hover, .type-tester #typetools .type-tool#textAlignment button.-active, .type-tester #typetools .type-tool#glyphsTypeToggle button:hover, .type-tester #typetools .type-tool#glyphsTypeToggle button.-active {
+  color: #000;
+  background: #fff;
+}
+.type-tester #typetools .type-tool#glyphsTypeToggle {
+  align-items: flex-end;
+}
+.type-tester #typetools .type-tool#glyphsTypeToggle button {
+  width: 100%;
+  display: block;
+  margin-bottom: 2px;
+  vertical-align: top;
+}
+.type-tester #typetools #colorPairsContainer .color-pair {
+  padding: 0;
+  width: 22px;
+  height: 22px;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  background: none;
+  line-height: 22px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+}
+.type-tester #typetools #colorPairsContainer .color-pair:focus {
+  outline: none;
+}
+.type-tester #typetools #colorPairsContainer .color-pair:hover, .type-tester #typetools #colorPairsContainer .color-pair.-active {
+  z-index: 1;
+  outline: 1px solid #fff;
+}
+.type-tester #glyphChart {
+  padding: 0;
+  width: 100%;
+  display: none;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+.type-tester #glyphChart.-active {
+  display: flex;
+}
+.type-tester #glyphChart li {
+  flex-grow: 1;
+  padding: 11px;
+  list-style: none;
+  text-align: center;
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
